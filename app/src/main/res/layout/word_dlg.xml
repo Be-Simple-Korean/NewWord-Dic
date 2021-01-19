@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/dlg_shape"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/word_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:singleLine="true"
+        android:text="제목"
+        android:fontFamily="@font/reco"
+        android:paddingLeft="20dp"
+        android:textSize="40sp"
+        android:textColor="@color/blue"/>
+    <TextView
+        android:id="@+id/word_meaning"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scrollbars="vertical"
+        android:layout_marginTop="20dp"
+        android:text="동해물과 백두산이 마르고 닳도록 남산 하늘 저 아래 소나무 산기슭이"
+        android:paddingLeft="25dp"
+        android:paddingRight="20dp"
+        android:textColor="#000"
+        android:textSize="20sp"/>
+</LinearLayout>
