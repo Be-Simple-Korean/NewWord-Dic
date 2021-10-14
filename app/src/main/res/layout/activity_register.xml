@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Register">
+    tools:context="notyet.newword.ui.activity.RegisterActivity">
     <RelativeLayout
         android:background="@color/blue"
         android:layout_width="match_parent"

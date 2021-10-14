@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.newword">
+    package="notyet.newword">
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <application
         android:allowBackup="true"
-        android:icon="@drawable/icon"
-        android:label="신조어 사전"
-        android:roundIcon="@drawable/icon"
+        android:icon="@mipmap/main_icon_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/main_icon_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Register" />
-        <activity android:name=".WriteWord" />
-        <activity android:name=".WordListAct" />
-        <activity android:name=".BN" />
-        <activity android:name=".MainActivity">
+        <activity android:name="notyet.newword.ui.activity.RegisterActivity" />
+        <activity android:name="notyet.newword.ui.activity.WriteWord" />
+        <activity android:name="notyet.newword.ui.activity.WordListAct" />
+        <activity android:name="notyet.newword.ui.activity.BottomNavigationActivity" />
+        <activity android:name="notyet.newword.ui.activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

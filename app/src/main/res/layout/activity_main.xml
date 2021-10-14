@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@color/blue"
     android:gravity="center"
-    tools:context=".MainActivity">
+    tools:context="notyet.newword.ui.activity.MainActivity">
 
     <TextView
         android:id="@+id/textView"
