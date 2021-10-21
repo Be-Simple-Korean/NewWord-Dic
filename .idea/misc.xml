@@ -3,10 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/cw031/AndroidStudioProjects/NewWord-Dic/app/src/main/res/layout/activity_b_n.xml" value="0.18659420289855072" />
+        <entry key="..\:/Users/cw031/AndroidStudioProjects/NewWord-Dic/app/src/main/res/drawable/dlg_shape.xml" value="0.21927083333333333" />
+        <entry key="..\:/Users/cw031/AndroidStudioProjects/NewWord-Dic/app/src/main/res/drawable/selector_icon.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/cw031/AndroidStudioProjects/NewWord-Dic/app/src/main/res/layout/activity_b_n.xml" value="0.22" />
         <entry key="..\:/Users/cw031/AndroidStudioProjects/NewWord-Dic/app/src/main/res/layout/activity_main.xml" value="0.2046875" />
+        <entry key="..\:/Users/cw031/AndroidStudioProjects/NewWord-Dic/app/src/main/res/layout/activity_register.xml" value="0.20364583333333333" />
+        <entry key="..\:/Users/cw031/AndroidStudioProjects/NewWord-Dic/app/src/main/res/layout/activity_word_list.xml" value="0.20364583333333333" />
+        <entry key="..\:/Users/cw031/AndroidStudioProjects/NewWord-Dic/app/src/main/res/layout/activity_write_word.xml" value="0.20364583333333333" />
+        <entry key="..\:/Users/cw031/AndroidStudioProjects/NewWord-Dic/app/src/main/res/layout/board_item.xml" value="0.20364583333333333" />
+        <entry key="..\:/Users/cw031/AndroidStudioProjects/NewWord-Dic/app/src/main/res/layout/board_word_dlg.xml" value="0.20364583333333333" />
+        <entry key="..\:/Users/cw031/AndroidStudioProjects/NewWord-Dic/app/src/main/res/layout/dialog_common.xml" value="0.5" />
+        <entry key="..\:/Users/cw031/AndroidStudioProjects/NewWord-Dic/app/src/main/res/layout/frag_board.xml" value="0.20364583333333333" />
         <entry key="..\:/Users/cw031/AndroidStudioProjects/NewWord-Dic/app/src/main/res/layout/frag_search.xml" value="0.2046875" />
         <entry key="..\:/Users/cw031/AndroidStudioProjects/NewWord-Dic/app/src/main/res/layout/frag_set.xml" value="0.2046875" />
+        <entry key="..\:/Users/cw031/AndroidStudioProjects/NewWord-Dic/app/src/main/res/layout/fragment_search.xml" value="0.18" />
+        <entry key="..\:/Users/cw031/AndroidStudioProjects/NewWord-Dic/app/src/main/res/layout/login_dlg.xml" value="0.20364583333333333" />
+        <entry key="..\:/Users/cw031/AndroidStudioProjects/NewWord-Dic/app/src/main/res/layout/question_dlg.xml" value="0.20364583333333333" />
+        <entry key="..\:/Users/cw031/AndroidStudioProjects/NewWord-Dic/app/src/main/res/layout/word_dlg.xml" value="0.20364583333333333" />
         <entry key="..\:/Users/cw031/AndroidStudioProjects/NewWord-Dic/app/src/main/res/menu/bottom_menu.xml" value="0.2046875" />
       </map>
     </option>

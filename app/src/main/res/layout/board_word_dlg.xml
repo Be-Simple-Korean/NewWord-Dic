@@ -13,7 +13,7 @@
         android:text="제목"
         android:fontFamily="@font/reco"
         android:paddingLeft="20dp"
-        android:textSize="35sp"
+        android:textSize="35dp"
         android:textColor="@color/blue"/>
 
     <LinearLayout
@@ -54,7 +54,7 @@
         android:paddingLeft="25dp"
         android:paddingRight="20dp"
         android:textColor="#000"
-        android:textSize="20sp"/>
+        android:textSize="20dp"/>
     <LinearLayout
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
@@ -71,7 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:textSize="25sp"
+                android:textSize="25dp"
                 android:text="삭제"
                 android:visibility="invisible"
                 android:layout_marginBottom="10dp"
@@ -82,7 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
-                android:textSize="25sp"
+                android:textSize="25dp"
                 android:layout_marginBottom="10dp"
                 android:textColor="@color/blue"
                 android:layout_alignParentRight="true"

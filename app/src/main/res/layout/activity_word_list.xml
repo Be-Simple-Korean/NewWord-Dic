@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="notyet.newword.ui.activity.WordListAct">
+    android:layout_height="match_parent">
     <RelativeLayout
         android:background="@color/blue"
         android:layout_width="match_parent"
@@ -15,7 +14,7 @@
             android:layout_height="wrap_content"
             android:text="신조어 목록"
             android:textColor="#ffffff"
-            android:textSize="25sp"
+            android:textSize="25dp"
             android:layout_marginLeft="20dp"
             android:textStyle="bold"
             android:layout_centerInParent="true"

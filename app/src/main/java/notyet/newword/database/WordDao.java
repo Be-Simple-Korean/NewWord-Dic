@@ -19,6 +19,7 @@ public interface WordDao {
 
     @Query("SELECT word FROM word")
     List<String> getWord();
+
     @Insert
     void insert(Word word);
 
@@ -28,4 +29,6 @@ public interface WordDao {
     @Delete
     void delete(Word word);
 
+    @Query("DELETE FROM word")
+    void clear();
 }

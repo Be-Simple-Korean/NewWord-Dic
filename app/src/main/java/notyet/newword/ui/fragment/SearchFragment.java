@@ -2,10 +2,15 @@ package notyet.newword.ui.fragment;
 
 import static android.content.Context.MODE_PRIVATE;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.SpannableStringBuilder;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,10 +27,12 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.room.Room;
 
+import notyet.newword.BuildConfig;
 import notyet.newword.R;
 import notyet.newword.database.AppDataBase;
 import notyet.newword.database.WordDao;
 import notyet.newword.ui.activity.WordListAct;
+import notyet.newword.ui.common.CommonDialog;
 import notyet.newword.viewmodel.MainViewModel;
 
 public class SearchFragment extends Fragment {
@@ -43,12 +50,11 @@ public class SearchFragment extends Fragment {
                 AppDataBase.class, "word")
                 .build(); //데이터베이스 객체 생성
         SharedPreferences sf = this.getActivity().getSharedPreferences("sFile", MODE_PRIVATE);
-        boolean isF = sf.getBoolean("isF", false);
-        if (!isF) {
+        float version = sf.getFloat("version", 1.0f);
+        if (version < Float.parseFloat(BuildConfig.VERSION_NAME)) {
             viewModel.insert();
-            isF = true;
             SharedPreferences.Editor editor = sf.edit();
-            editor.putBoolean("isF", isF);
+            editor.putFloat("version", Float.parseFloat(BuildConfig.VERSION_NAME));
             editor.commit();
         }
 
@@ -89,6 +95,8 @@ public class SearchFragment extends Fragment {
                 startActivity(i);
             }
         });
+
+
         return view;
     }
 
@@ -118,7 +126,21 @@ public class SearchFragment extends Fragment {
                     tv_mean.setText(mean);
                 }
             } catch (Exception e) {
-                Toast.makeText(view.getContext(), "단어를 찾을수없습니다. 다시 검색해주세요", Toast.LENGTH_SHORT).show();
+                CommonDialog dialog = new CommonDialog(requireContext(), "단어를 찾을수 없습니다.\n 브라우저에서 검색하시겠습니까?", new CommonDialog.SetOnClickListener() {
+                    @Override
+                    public void onNegativeClick() {
+                    }
+
+                    @Override
+                    public void onPositiveClick() {
+                        ed_word.setText("");
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse("https://www.google.com/search?q=" + word + "&ie=UTF-8"));
+                        startActivity(intent);
+                    }
+                });
+                dialog.show();
+
             }
         }
     }

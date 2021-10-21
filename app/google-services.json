@@ -1,18 +1,27 @@
 {
   "project_info": {
     "project_number": "941686092344",
+    "firebase_url": "https://newword-2cd31-default-rtdb.firebaseio.com",
     "project_id": "newword-2cd31",
     "storage_bucket": "newword-2cd31.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:941686092344:android:632fd5c9daeb285120eccd",
+        "mobilesdk_app_id": "1:941686092344:android:38cadf36d7672a8120eccd",
         "android_client_info": {
           "package_name": "notyet.newword"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "941686092344-4se3kgi8shs0u71q8lr5g5ms0sostk9m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "notyet.newword",
+            "certificate_hash": "4dba81183e031daa9b32c2848e70db9179fd3268"
+          }
+        },
         {
           "client_id": "941686092344-ua4b0v7kjd49po30s9chgte4ftu5lqae.apps.googleusercontent.com",
           "client_type": 3

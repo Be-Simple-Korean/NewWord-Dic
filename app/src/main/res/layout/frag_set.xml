@@ -12,7 +12,7 @@
             android:layout_height="wrap_content"
             android:text="설정"
             android:textColor="#ffffff"
-            android:textSize="25sp"
+            android:textSize="25dp"
             android:layout_marginLeft="20dp"
             android:textStyle="bold"
             android:layout_centerInParent="true"
@@ -27,7 +27,7 @@
         android:orientation="horizontal">
         <TextView
             android:id="@+id/tv_ui"
-            android:textSize="25sp"
+            android:textSize="25dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:text="앱 버전"
             android:textColor="#000"
-            android:textSize="25sp"
+            android:textSize="25dp"
             android:layout_marginLeft="10dp"
             android:layout_centerInParent="true"
             android:layout_alignParentLeft="true"/>
@@ -68,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="text"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:layout_marginRight="5dp"
             android:layout_alignParentRight="true"
             android:layout_centerInParent="true"/>
@@ -87,7 +87,7 @@
             android:layout_height="wrap_content"
             android:text="폰트 라이선스"
             android:textColor="#000"
-            android:textSize="25sp"
+            android:textSize="25dp"
             android:layout_marginLeft="10dp"
             android:layout_centerInParent="true"
             android:layout_alignParentLeft="true"/>
@@ -95,7 +95,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="레시피 코리아"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:layout_marginRight="5dp"
             android:layout_alignParentRight="true"
             android:layout_centerInParent="true"/>
@@ -114,7 +114,7 @@
             android:layout_height="wrap_content"
             android:text="문의하기"
             android:textColor="#000"
-            android:textSize="25sp"
+            android:textSize="25dp"
             android:layout_marginLeft="10dp"
             android:layout_centerInParent="true"
             android:layout_alignParentLeft="true"/>

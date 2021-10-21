@@ -1,30 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:background="@drawable/dlg_shape"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/word_title"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a1000000">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:singleLine="true"
-        android:text="제목"
-        android:fontFamily="@font/reco"
-        android:paddingLeft="20dp"
-        android:textSize="40sp"
-        android:textColor="@color/blue"/>
-    <TextView
-        android:id="@+id/word_meaning"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:scrollbars="vertical"
-        android:layout_marginTop="20dp"
-        android:text="동해물과 백두산이 마르고 닳도록 남산 하늘 저 아래 소나무 산기슭이"
-        android:paddingLeft="25dp"
-        android:paddingRight="20dp"
-        android:textColor="#000"
-        android:textSize="20sp"/>
-</LinearLayout>
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/dlg_shape"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/word_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/reco"
+            android:paddingLeft="20dp"
+            android:singleLine="true"
+            tools:text="제목"
+            android:textColor="@color/blue"
+            android:textSize="40dp" />
+
+        <TextView
+            android:id="@+id/word_meaning"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:scrollbars="vertical"
+            android:textColor="#000"
+            android:textSize="20dp"
+            tools:text="동해물과 백두산이 마르고 닳도록 남산 하늘 저 아래 소나무 산기슭이" />
+    </LinearLayout>
+</FrameLayout>

@@ -14,42 +14,45 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import notyet.newword.R;
+import notyet.newword.ui.dialog.ShowWordDialog;
 import notyet.newword.viewmodel.MainViewModel;
 import notyet.newword.database.WordDao;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class WordListAct extends AppCompatActivity {
     ArrayAdapter adapter;
     private ArrayList<String> war;
-    private TextView tv_word;
-    private TextView tv_mean;
     private ListView list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_word_list);
-        MainViewModel viewModel= ViewModelProviders.of(this).get(MainViewModel.class);
+        MainViewModel viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
         new WordListAsyncTask(viewModel.db.wordDao()).execute();
         list = findViewById(R.id.list);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Dialog dialog=new Dialog(WordListAct.this);
-                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                dialog.setContentView(R.layout.word_dlg);
-                dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
-                tv_word = dialog.findViewById(R.id.word_title);
-                tv_mean = dialog.findViewById(R.id.word_meaning);
-                String word=war.get(i);
-                new MeanAsyncTask(viewModel.db.wordDao()).execute(word);
-                dialog.show();
+                String word = war.get(i);
+                String mean = "";
+                try {
+                    mean = new MeanAsyncTask(viewModel.db.wordDao()).execute(word).get();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                ShowWordDialog wordDialog = new ShowWordDialog(WordListAct.this, war.get(i), mean);
+                wordDialog.show();
             }
         });
     }
-    private class MeanAsyncTask extends AsyncTask<String,String,Void>{
+
+    private class MeanAsyncTask extends AsyncTask<String, String, String> {
         private WordDao wordDao;
 
         public MeanAsyncTask(WordDao wordDao) {
@@ -57,20 +60,14 @@ public class WordListAct extends AppCompatActivity {
         }
 
         @Override
-        protected Void doInBackground(String... s) {
-            String mean=wordDao.getmeaning(s[0]);
-            publishProgress(s[0],mean);
-            return null;
-        }
-
-        @Override
-        protected void onProgressUpdate(String... newWord) {
-            super.onProgressUpdate(newWord);
-            tv_word.setText(newWord[0]);
-            tv_mean.setText(newWord[1]);
+        protected String doInBackground(String... s) {
+            String mean = wordDao.getmeaning(s[0]);
+            publishProgress(s[0], mean);
+            return mean;
         }
     }
-    private class WordListAsyncTask extends AsyncTask<Void,ArrayList<String>, ArrayList<String>>{
+
+    private class WordListAsyncTask extends AsyncTask<Void, ArrayList<String>, ArrayList<String>> {
         private WordDao wordDao;
 
         public WordListAsyncTask(WordDao wordDao) {
@@ -79,7 +76,7 @@ public class WordListAct extends AppCompatActivity {
 
         @Override
         protected ArrayList<String> doInBackground(Void... voids) {
-            List<String> lar=wordDao.getWord();
+            List<String> lar = wordDao.getWord();
             publishProgress((ArrayList<String>) lar);
             return (ArrayList<String>) lar;
         }
@@ -87,8 +84,8 @@ public class WordListAct extends AppCompatActivity {
         @Override
         protected void onProgressUpdate(ArrayList<String>... values) {
             super.onProgressUpdate(values);
-            war=values[0];
-            adapter=new ArrayAdapter(WordListAct.this, android.R.layout.simple_list_item_1,values[0]);
+            war = values[0];
+            adapter = new ArrayAdapter(WordListAct.this, android.R.layout.simple_list_item_1, values[0]);
             list.setAdapter(adapter);
         }
     }

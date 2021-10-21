@@ -52,6 +52,7 @@ public class MainViewModel extends AndroidViewModel {
         }
         @Override
         protected Void doInBackground(Void... voids) {
+            wordDao.clear();
             Resources r=application.getResources();
             String[] word=r.getStringArray(R.array.word);
             String[] meaning=r.getStringArray(R.array.meaning);

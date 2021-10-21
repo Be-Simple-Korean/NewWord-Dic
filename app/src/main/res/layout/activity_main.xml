@@ -18,7 +18,7 @@
         android:gravity="center"
         android:text="신조어\n사전"
         android:textColor="#ffffff"
-        android:textSize="50sp"
+        android:textSize="50dp"
         android:textStyle="bold" />
 
 

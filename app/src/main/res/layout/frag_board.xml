@@ -13,7 +13,7 @@
             android:layout_height="wrap_content"
             android:text="신조어 게시판"
             android:textColor="#ffffff"
-            android:textSize="25sp"
+            android:textSize="25dp"
             android:layout_marginLeft="20dp"
             android:textStyle="bold"
             android:layout_centerInParent="true"
